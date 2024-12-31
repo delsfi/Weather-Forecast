@@ -4,13 +4,16 @@ body {
     padding: 0;
     background: linear-gradient(to bottom, #87CEEB, #f0f8ff);
     color: #333;
+    background-image: url('https://cdn.pixabay.com/photo/2020/09/27/08/44/clouds-5606104_1280.jpg');
+    background-size: cover; 
+    background-position: center; 
 }
 
 header {
-    background-color: #4682B4;
     color: white;
+    font-size: larger;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-align: center;
-    padding: 1em 0;
 }
 
 .container {
@@ -24,11 +27,35 @@ header {
 .city-info {
     display: flex;
     align-items: center;
+    gap: 20px;
     justify-content: space-between;
 }
 .city-info img {
-    width: 100px;
-    height: 100px;
+    max-width: 200px;
+}
+.search {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.search input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color: #0056b3;
 }
 .forecast {
     display: flex;
@@ -61,7 +88,6 @@ header {
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #4682B4;
     color: white;
     margin-top: 20px;
 }
