@@ -144,9 +144,21 @@ header p {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .city-info {
-        width: 90%; 
+        flex-direction: column; /* Ubah elemen menjadi kolom */
+        align-items: center; /* Pusatkan elemen secara horizontal */
+    }
+
+    .info {
+        width: 90%; /* Gunakan lebar fleksibel */
+        max-width: 400px; /* Batasi lebar maksimum */
+        height: auto; /* Ubah tinggi menjadi otomatis */
+    }
+
+    .info img {
+        max-width: 60px; /* Sesuaikan ukuran gambar */
+        margin-bottom: 10px; /* Tambahkan jarak di bawah gambar */
     }
 }
 
@@ -187,6 +199,25 @@ header p {
 .search button:hover {
     background-color: #21b0cd;
     box-shadow: 0 4px 10px rgba(0, 91, 181, 0.3);
+}
+@media (max-width: 768px) {
+    .search {
+        flex-direction: column; /* Ubah elemen menjadi kolom */
+        align-items: stretch; /* Buat elemen melebar ke seluruh container */
+        gap: 10px; /* Tambahkan jarak antar elemen */
+    }
+
+    .search input {
+        width: 100%; /* Gunakan seluruh lebar container */
+        max-width: 100%; /* Hindari input melampaui container */
+        box-sizing: border-box; /* Pastikan padding tidak menambah ukuran total */
+        border-radius: 8px; /* Tambahkan sudut membulat */
+    }
+
+    .search button {
+        width: 100%; /* Pastikan tombol memenuhi lebar container */
+        border-radius: 8px; /* Tambahkan sudut membulat */
+    }
 }
 
 .forecast {

@@ -1,4 +1,3 @@
-
 async function searchCity() {
     const searchInput = document.querySelector("#search-input").value.toUpperCase();
   
@@ -38,7 +37,7 @@ async function searchCity() {
       currentDate.innerHTML = data.current.time;
       currentWind.innerHTML = data.current.wind_speed_10m + " km/h";
       currentHum.innerHTML = data.current.relative_humidity_2m + "%";
-      currentPre.innerHTML = data.current.precipitation + " inch";
+      currentPre.innerHTML = data.current.precipitation + " mm";
       currentTempFeel.innerHTML = data.current.apparent_temperature + "°C";
   
       // Kondisi cuaca
