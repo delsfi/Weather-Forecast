@@ -24,7 +24,7 @@ header p {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1100px;
     margin: 20px auto;
     padding: 20px;
     background: #f0f7fbe0;
@@ -39,12 +39,11 @@ header p {
 }
 .info {
     background-color: #ffffff;
-    
     border-radius: 10px;
     padding: 5px;
     text-align: center; 
     width: 500px; 
-    height: 200px;
+    height: 220px;
     color: #333;
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
@@ -71,13 +70,28 @@ header p {
     color: #0092f4;
 }
 
+#condition {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c2a2a;
+}
 .info p {
     margin: 5px 0;
-    font-size: 16px;
+    font-size: 12px;
+}
+
+.border-icon{
+    background-color: aqua;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
 }
 
 .details {
-    background-color: #ffffff; 
+    background-color: #ffffff;
+    border: 2px solid rgb(31, 179, 224);
     border-radius: 12px;
     font-family: 'Roboto', sans-serif; 
     color: #086fb8; 
@@ -92,7 +106,10 @@ header p {
     display: flex;
 }
 .details-icon img {
-    max-width:30px;
+    padding: 0 5px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
     
 }
 .details-1 h3 {
@@ -186,10 +203,9 @@ header p {
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(49, 190, 250, 0.444);
     border-radius: 8px;
-    padding: 15px;
     text-align: center;
-    margin: 10px;
-    width: 80px;
+    margin: 5px;
+    width: 130px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -206,15 +222,21 @@ header p {
 .forecast .day h3 {
     font-size: 14px;
     margin-bottom: 1px; 
-    color: #555;
+    color: #007BFF;
 }
 
 .forecast .day p {
     font-size: 14px; 
-    margin: 1px 0;
-    color: #666;
+    margin: 5px 0;
+    color: #5d5959;
+    font-weight: bold;
 }
 
+#temp {
+    font-size: 16px;
+    font-weight: bold;
+    color: #245fdf;
+}
 
 @media (max-width: 600px) {
     .forecast {

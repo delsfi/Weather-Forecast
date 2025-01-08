@@ -1,4 +1,4 @@
-// Import cityCoordinates (assumes this is loaded in index.html)
+
 async function searchCity() {
     const searchInput = document.querySelector("#search-input").value.toUpperCase();
   
@@ -38,7 +38,7 @@ async function searchCity() {
       currentDate.innerHTML = data.current.time;
       currentWind.innerHTML = data.current.wind_speed_10m + " km/h";
       currentHum.innerHTML = data.current.relative_humidity_2m + "%";
-      currentPre.innerHTML = data.current.precipitation + " mm";
+      currentPre.innerHTML = data.current.precipitation + " inch";
       currentTempFeel.innerHTML = data.current.apparent_temperature + "°C";
   
       // Kondisi cuaca
@@ -57,12 +57,14 @@ async function searchCity() {
       data.daily.time.forEach((time, i) => {
         const loopedCode = data.daily.weather_code[i];
         forecastContent.innerHTML += `
-          <div class="day">
-              <h3>${time}</h3>
-              <img src="${code[loopedCode][currentDay].image}" alt="Sunny">
-              <p>${data.daily.temperature_2m_min[i]}°C</p>
-              <p>${code[loopedCode][currentDay].description}</p>
-          </div>`;
+        <div class="day">
+        <h3>${time}</h3>
+        <div class="border-icon">
+            <img src="${code[loopedCode][currentDay].image}" alt="Sunny">
+        </div>
+        <p id = "temp">${data.daily.temperature_2m_min[i]}°C</p>
+        <p>${code[loopedCode][currentDay].description}</p>
+    </div>`;
       });
     } catch (error) {
       console.log(error);
